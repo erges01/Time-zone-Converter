@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Zone Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Time Zone Converter</h1>
+        <form id="time-zone-form">
+            <div class="form-group">
+                <label for="current-country">Current Country:</label>
+                <select id="current-country" required></select>
+            </div>
+            <div class="form-group">
+                <label for="target-country">Target Country:</label>
+                <select id="target-country" required></select>
+            </div>
+            <div class="form-group">
+                <label for="time">Time (HH:mm):</label>
+                <input type="time" id="time" required>
+            </div>
+            <button type="button" class="convert-button" onclick="convertTime()">Convert Time</button>
+        </form>
+        <div id="result-container">
+            <p id="result"></p>
+        </div>
+        <button class="fetch-button" onclick="fetchCurrentTime()">Fetch Current Time</button>
+        <div id="current-time-container">
+            <p id="current-time"></p>
+        </div>
+    </div>
+</body>
+</html>
